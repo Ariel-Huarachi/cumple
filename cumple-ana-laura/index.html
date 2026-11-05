@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¡Feliz Cumpleaños, Ana Laura! 💖</title>
+  <meta name="description" content="Un detalle muy especial para Ana Laura Guzmán en su cumpleaños." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>" />
+</head>
+<body>
+  <!-- Fondo animado: estrellas y corazones flotando -->
+  <canvas id="bg"></canvas>
+
+  <!-- Música de fondo: pon tu canción en la carpeta con el nombre "musica.mp3".
+       Si no hay archivo, suena una cajita musical de "Feliz Cumpleaños" generada por el navegador. -->
+  <audio id="music" src="musica.mp3" loop preload="auto"></audio>
+  <button id="musicBtn" class="music-btn" aria-label="Música">
+    <span class="note">♪</span>
+    <span class="bars"><i></i><i></i><i></i></span>
+  </button>
+
+  <!-- Pantalla de inicio (sobre) -->
+  <div id="intro">
+    <div class="envelope" id="openBtn" role="button" tabindex="0" aria-label="Abrir sorpresa">
+      <div class="env-back"></div>
+      <div class="env-letter"><span>💌</span></div>
+      <div class="env-front"></div>
+      <div class="env-flap"></div>
+      <div class="env-seal">♥</div>
+    </div>
+    <p class="intro-text">Para <strong>Ana Laura</strong></p>
+    <p class="intro-hint">Toca el sobre para abrir tu sorpresa ✨</p>
+  </div>
+
+  <main>
+    <!-- Sección 1: Corazón 3D -->
+    <section class="hero">
+      <p class="pre-title">Hoy es un día muy especial…</p>
+      <h1 class="title">¡Feliz Cumpleaños!</h1>
+      <h2 class="name">Ana Laura Guzmán</h2>
+      <div class="heart-wrap">
+        <canvas id="heart3d" title="Tócame 💖"></canvas>
+      </div>
+      <p class="tap-hint">Toca el corazón 💗</p>
+      <button id="goMsg" class="go-btn">Ver mi mensaje para ti <span class="arrow">↓</span></button>
+    </section>
+
+    <!-- Sección 2: Flor + mensaje -->
+    <section class="garden" id="mensaje">
+      <div class="flower-scene">
+        <div class="flower" id="flower">
+          <div class="stem">
+            <div class="leaf leaf-l"></div>
+            <div class="leaf leaf-r"></div>
+          </div>
+          <div class="bloom">
+            <div class="petals outer">
+              <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i>
+              <i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i>
+            </div>
+            <div class="petals inner">
+              <i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i>
+              <i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i>
+            </div>
+            <div class="center"></div>
+          </div>
+          <div class="sparkles">
+            <b></b><b></b><b></b><b></b><b></b><b></b>
+          </div>
+        </div>
+        <div class="ground"></div>
+      </div>
+
+      <article class="card">
+        <h3>Querida Ana Laura:</h3>
+        <p id="typed" class="typed"></p>
+        <p class="signature">Con todo mi cariño, Ariel 💖</p>
+      </article>
+    </section>
+
+    <!-- Sección 3: Segundo mensaje -->
+    <section class="believe">
+      <article class="card card-gold">
+        <div class="stars-deco">✦ ✧ ✦</div>
+        <h3>Un mensaje más para ti…</h3>
+        <p id="typed2" class="typed"></p>
+        <p class="signature">Cree en ti, siempre. Ariel 🌟</p>
+      </article>
+    </section>
+
+    <!-- Sección 4: Deseos -->
+    <section class="wishes">
+      <h3 class="section-title">Te deseo con el corazón…</h3>
+      <div class="wish-grid">
+        <div class="wish"><span>🌷</span><h4>Salud y paz</h4><p>Que cada día amanezcas con energía y el alma tranquila.</p></div>
+        <div class="wish"><span>✨</span><h4>Sueños cumplidos</h4><p>Que todo lo que imaginas se vuelva realidad este año.</p></div>
+        <div class="wish"><span>💞</span><h4>Mucho amor</h4><p>Rodeada siempre de personas que te quieran tanto como yo.</p></div>
+        <div class="wish"><span>🎈</span><h4>Aventuras nuevas</h4><p>Risas, viajes y recuerdos bonitos que coleccionar.</p></div>
+      </div>
+
+      <div class="final">
+        <p class="final-text">Nunca dejes de brillar 🌟</p>
+        <button id="hugBtn" class="hug-btn">Enviarte un abrazo 🤗</button>
+        <div class="from">
+          <p class="from-label">Con mucho cariño, de parte de</p>
+          <p class="from-name">Ariel</p>
+          <p class="from-heart">💖</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>Hecho con 💖 por Ariel para Ana Laura</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
